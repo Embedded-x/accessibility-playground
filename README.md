@@ -1,16 +1,29 @@
 # Accessibility Playground
 
-A React + TypeScript playground demonstrating accessible UI components built from scratch following the WAI-ARIA Authoring Practices Guide (APG).
+An accessibility-focused React application built with **React**, **TypeScript**, and **Vite**. This project demonstrates three accessible UI components—**Modal Dialog**, **Tabs**, and **Disclosure**—implemented from scratch following the **WAI-ARIA Authoring Practices**.
 
-## Overview
+---
 
-This project implements three accessible interactive components without using any component libraries:
+## Live Demo
 
-- Modal Dialog
-- Tabs
-- Disclosure (Accordion)
+🔗 **GitHub Pages:** https://embedded-x.github.io/accessibility-playground/
 
-The focus of the project is accessibility, keyboard navigation, proper ARIA usage, and focus management.
+## GitHub Repository
+
+🔗 **Repository:** https://github.com/EMBEDDED-X/accessibility-playground
+
+---
+
+## Features
+
+- Accessible Modal Dialog
+- Accessible Tabs
+- Accessible Disclosure
+- Full keyboard navigation
+- Focus trapping inside the modal
+- Focus restoration after closing the modal
+- WAI-ARIA compliant implementation
+- Built from scratch without UI component libraries
 
 ---
 
@@ -23,87 +36,61 @@ The focus of the project is accessibility, keyboard navigation, proper ARIA usag
 
 ---
 
-## Components
+## Accessibility Features
 
-### 1. Modal Dialog
+### Modal Dialog
 
-Features:
+- Focus trapping
+- Escape key closes the dialog
+- Focus returns to the trigger button
+- Uses `role="dialog"` and `aria-modal="true"`
 
-- Opens and closes using buttons
-- Closes with the **Escape** key
-- Focus is trapped inside the dialog while open
-- Focus returns to the trigger button when closed
-- Uses:
-  - `role="dialog"`
-  - `aria-modal="true"`
+### Tabs
 
----
-
-### 2. Tabs
-
-Features:
-
-- Keyboard navigation
-  - Arrow Left
-  - Arrow Right
+- Keyboard navigation:
+  - Left Arrow
+  - Right Arrow
   - Home
   - End
-- Proper WAI-ARIA roles:
-  - `tablist`
-  - `tab`
-  - `tabpanel`
-- Roving `tabIndex`
-- Selected tab is synchronized with its panel
+- Uses:
+  - `role="tablist"`
+  - `role="tab"`
+  - `role="tabpanel"`
+- Implements roving `tabIndex`
 
----
+### Disclosure
 
-### 3. Disclosure
-
-Features:
-
-- Expand/collapse content
-- Keyboard accessible
+- Expand/Collapse functionality
 - Uses:
   - `aria-expanded`
   - `aria-controls`
-
----
-
-## Accessibility Features
-
-- Keyboard-only operation
-- Focus management
-- Focus trapping (Modal)
-- Focus restoration after closing Modal
-- WAI-ARIA compliant roles and attributes
-- Semantic HTML elements
-- TypeScript implementation without using `any` in component props
+- Built with semantic HTML
 
 ---
 
 ## Project Structure
 
-```
-playground/
-│
-├── src/
+```text
+src/
+├── components/
 │   ├── Modal.tsx
 │   ├── Tabs.tsx
 │   ├── Disclosure.tsx
-│   ├── App.tsx
-│   ├── main.tsx
 │   └── components.css
-│
-├── public/
-├── NOTES.md
-├── package.json
-├── vite.config.ts
-└── README.md
+├── App.tsx
+├── main.tsx
+└── index.css
 ```
 
 ---
 
 ## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/EMBEDDED-X/accessibility-playground.git
+```
 
 Install dependencies:
 
@@ -111,39 +98,36 @@ Install dependencies:
 npm install
 ```
 
-Start the development server:
+Run the development server:
 
 ```bash
 npm run dev
 ```
 
-Build the project:
+Build for production:
 
 ```bash
 npm run build
-```
-
-Preview the production build:
-
-```bash
-npm run preview
 ```
 
 ---
 
 ## Learning Outcomes
 
-This project demonstrates:
-
-- Accessible React component development
-- WAI-ARIA Authoring Practices
-- Keyboard interaction patterns
-- Focus management
-- React Hooks
-- TypeScript component design
+- Building accessible UI components from scratch
+- Implementing WAI-ARIA Authoring Practices
+- Managing keyboard interactions
+- Focus management and restoration
+- Developing reusable React components with TypeScript
 
 ---
 
-## Notes
+## Assignment
 
-A comparison between this implementation and the generated shadcn/ui components is included in **NOTES.md**.
+This project was completed as part of the **FlyRank AI Frontend Internship** accessibility assignment.
+
+---
+
+## License
+
+This project is intended for educational and internship evaluation purposes.
