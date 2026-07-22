@@ -6,7 +6,7 @@ An accessibility-focused React application built with **React**, **TypeScript**,
 
 ## Live Demo
 
-🔗 **GitHub Pages:** https://embedded-x.github.io/accessibility-playground/
+🔗 **Live Demo:** https://accessibility-playground-two.vercel.app/
 
 ## GitHub Repository
 
@@ -18,12 +18,12 @@ An accessibility-focused React application built with **React**, **TypeScript**,
 
 - Accessible Modal Dialog
 - Accessible Tabs
-- Accessible Disclosure
+- Accessible Disclosure (Accordion)
 - Full keyboard navigation
-- Focus trapping inside the modal
-- Focus restoration after closing the modal
-- WAI-ARIA compliant implementation
-- Built from scratch without UI component libraries
+- Focus trapping inside modal
+- Focus restoration after closing modal
+- WAI-ARIA compliant roles and attributes
+- Built without any UI component libraries
 
 ---
 
@@ -40,14 +40,17 @@ An accessibility-focused React application built with **React**, **TypeScript**,
 
 ### Modal Dialog
 
-- Focus trapping
-- Escape key closes the dialog
-- Focus returns to the trigger button
-- Uses `role="dialog"` and `aria-modal="true"`
+- Focus is trapped within the dialog
+- Supports closing with the **Escape** key
+- Focus returns to the trigger button after closing
+- Uses:
+  - `role="dialog"`
+  - `aria-modal="true"`
+  - `aria-labelledby`
 
 ### Tabs
 
-- Keyboard navigation:
+- Keyboard navigation
   - Left Arrow
   - Right Arrow
   - Home
@@ -70,7 +73,7 @@ An accessibility-focused React application built with **React**, **TypeScript**,
 
 ## Project Structure
 
-```text
+```
 src/
 ├── components/
 │   ├── Modal.tsx
@@ -110,15 +113,24 @@ Build for production:
 npm run build
 ```
 
+Preview the production build:
+
+```bash
+npm run preview
+```
+
 ---
 
 ## Learning Outcomes
 
+Through this project, I learned:
+
 - Building accessible UI components from scratch
-- Implementing WAI-ARIA Authoring Practices
+- Applying WAI-ARIA Authoring Practices
 - Managing keyboard interactions
 - Focus management and restoration
-- Developing reusable React components with TypeScript
+- Implementing reusable React components with TypeScript
+- Creating accessible interfaces without relying on component libraries
 
 ---
 
